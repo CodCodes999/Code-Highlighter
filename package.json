@@ -1,0 +1,80 @@
+{
+  "name": "code-highlighter",
+  "displayName": "Code Highlighter",
+  "description": "Highlight and remove highlights with a floating color picker.",
+  "version": "1.0.0",
+  "publisher": "LordGoda",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodCodes999/code-highlighter.git"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:code-highlighter.highlightSelection",
+    "onCommand:code-highlighter.showColorPalette",
+    "onCommand:code-highlighter.removeAllHighlights"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-highlighter.highlightSelection",
+        "title": "Highlight Selection",
+        "icon": {
+          "light": "media/highlight-light.svg",
+          "dark": "media/highlight-dark.svg",
+          "black": "media/highlight-000000.svg",
+          "white": "media/highlight-FFFFFF.svg",
+          "red": "media/highlight-FF0000.svg",
+          "green": "media/highlight-00FF00.svg",
+          "blue": "media/highlight-0000FF.svg",
+          "yellow": "media/highlight-FFFF00.svg",
+          "cyan": "media/highlight-00FFFF.svg",
+          "magenta": "media/highlight-FF00FF.svg",
+          "darkGreen": "media/highlight-008000.svg",
+          "purple": "media/highlight-800080.svg",
+          "orange": "media/highlight-FFA500.svg",
+          "grey": "media/highlight-808080.svg",
+          "pink": "media/highlight-FFC0CB.svg",
+          "lightBlue": "media/highlight-ADD8E6.svg",
+          "lightYellow": "media/highlight-FFFF99.svg"
+        }
+      },
+      {
+        "command": "code-highlighter.showColorPalette",
+        "title": "Choose Highlight Color",
+        "icon": {
+          "light": "media/bucket-light.svg",
+          "dark": "media/bucket-dark.svg"
+        }
+      },
+      {
+        "command": "code-highlighter.removeAllHighlights",
+        "title": "Remove All Highlights",
+        "icon": {
+          "light": "media/remove-light.svg",
+          "dark": "media/remove-dark.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "code-highlighter.highlightSelection",
+          "group": "navigation@1"
+        },
+        {
+          "command": "code-highlighter.showColorPalette",
+          "group": "navigation@2"
+        },
+        {
+          "command": "code-highlighter.removeAllHighlights",
+          "group": "navigation@3"
+        }
+      ]
+    }
+  }
+}
